@@ -65,6 +65,9 @@ To run the app
 App should be available via `http://127.0.0.1:8000/`
 
 
+Kubernetes with eksctl setup 
+
+`eksctl create -f eksctl/django-todo-v1.yaml`
 
 ## Installation locallly with kubernetes/minikube
 ### requiments: pipenv, python3, pip, docker, docker-compose, minikube 'brew install minikube', virtualbox, helm2, kubectl
