@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  db:
+  postgres-postgresql:
     image: postgres:10.1-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
@@ -12,6 +12,6 @@ services:
     ports:
       - 8000:8000
     depends_on:
-      - db
+      - postgres-postgresql
 volumes:
   postgres_data:

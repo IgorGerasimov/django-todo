@@ -1,0 +1,44 @@
+--- 
+  extraEnv: []
+  global: 
+    postgresql: {}
+  image: 
+    debug: false
+    pullPolicy: IfNotPresent
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 11.6.0-debian-10-r5
+  persistence: 
+    accessModes: 
+      - ReadWriteOnce
+    annotations: {}
+    enabled: true
+    mountPath: /bitnami/postgresql
+    size: 8Gi
+    subPath: ""
+  postgresqlDataDir: /bitnami/postgresql/data
+  postgresqlUsername: postgres
+  postgresqlPassword: postgres
+  postgresqlDatabase: postgres
+  readinessProbe: 
+    enabled: true
+    failureThreshold: 6
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 5
+  updateStrategy: 
+    type: RollingUpdate
+  volumePermissions: 
+    enabled: true
+    image: 
+      pullPolicy: Always
+      registry: docker.io
+      repository: bitnami/minideb
+      tag: buster
+    securityContext: 
+      runAsUser: 0
+  service:
+    name: db
+    type: ClusterIP
+    port: 5432
