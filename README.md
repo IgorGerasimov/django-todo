@@ -34,8 +34,13 @@ Then:
 
 
 
-## Installation locallly with docker-compose
+## Installation/running locallly with docker-compose
 ### requiments: pipenv, python3, pip, docker, docker-compose
+
+```
+git clone https://github.com/IgorGerasimov/django-todo
+cd django-todo
+```
 
 for building of docker image manually `docker build --no-cache -t <registry>/django-todo .`
 
@@ -69,7 +74,7 @@ App should be available via `http://127.0.0.1:8000/`
 
 `eksctl create -f eksctl/django-todo-v1.yaml`
 
-## Installation locallly with kubernetes/minikube
+## Installation/running locallly with kubernetes/minikube
 ### requiments: pipenv, python3, pip, docker, docker-compose, minikube 'brew install minikube', virtualbox, helm2, kubectl
 links:
 `https://www.virtualbox.org/wiki/Downloads` - virtualbox
