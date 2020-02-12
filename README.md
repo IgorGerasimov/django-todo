@@ -109,4 +109,4 @@ TO-DO
 
 
 ![scheme of current setup](/pics/scheme.png)
-![working screnshot](/pics/working screen.png)
+![working screnshot](/pics/working_screen.png)
