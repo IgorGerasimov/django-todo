@@ -39,14 +39,6 @@ Then:
 
 for building of docker image manually `docker build --no-cache -t <registry>/django-todo .`
 
-
-```
-git clone https://github.com/IgorGerasimov/django-todo
-cd django-todo
-pipenv install # Installs all dependencies
-pipenv shell  # Activates the environment
-```
-
 Modify to match your local db credentials. In `project/local.py`:
 
 ```
@@ -56,7 +48,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'HOST': 'postgres-postgresql',
         'PORT': '',
     },
 }
