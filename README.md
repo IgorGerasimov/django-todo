@@ -92,8 +92,24 @@ links:
    django-todo install `helm install --wait --name django-todo helm/`
 
 
+Now we need to open it via browser: 
+- connect to VM `minikube ssh`
+- get ip of your VM `ifconfig` - you need ip if external interface
+
+  ```
+  eth1      Link encap:Ethernet  HWaddr 08:00:27:32:C5:37
+          inet addr:192.168.99.100  Bcast:192.168.99.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:228043 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:121439 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:36052695 (34.3 MiB)  TX bytes:134394782 (128.1 MiB)
+  ```
+- add such record ``192.168.99.100 hello-world.info` to your `/etc/hosts` file.
+- open `hello-world.info` in browser
 
 
+![working screnshot](/pics/working_screen.png)
 
 
 
@@ -109,4 +125,3 @@ TO-DO
 
 
 ![scheme of current setup](/pics/scheme.png)
-![working screnshot](/pics/working_screen.png)
